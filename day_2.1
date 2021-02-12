@@ -1,0 +1,25 @@
+if __name__ == '__main__' :
+    fichier = open('input_2.txt' , 'r')
+    content = fichier.read()
+
+    x=0
+
+    monTableau = [i for i in content.split('\n')]
+    for i in monTableau:
+        s = i.split(' ')
+        min = int(s[0].split('-')[0])
+        print(min)
+        max = int(s[0].split('-')[1])
+        mdp = s[2]
+        lettre = s[1].split(':')[0]
+
+        nb = mdp.count(lettre)
+        if min <= nb <= max:
+            x = x + 1
+
+
+        print(min)
+        print(max)
+        print(mdp)
+        print(lettre)
+        print(x)
